@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/fairy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.divRegistro {
+    background-color: #a4cfb270;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #cbeed7; /* Sombra para darle aspecto de tarjeta */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+}
+
+.divRegistro input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #578164;
+    font-size: 16px;
+}
+
+.divRegistro button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A4CFB2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.divRegistro button:hover {
+    background-color: #578164;
+}
+
+.divRegistro p {
+    margin-top: 10px;
+    color: #564946;
+    font-size: 14px;
+}
