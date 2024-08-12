@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { auth, googleProvider } from '../config/firebase'
 import { createUserWithEmailAndPassword, signInWithPopup, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import '../AuthStyle.css'
 
 function Auth() {
@@ -10,6 +11,7 @@ function Auth() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const navigate = useNavigate()
 
     console.log(auth?.currentUser?.email) //-> para ver que usuario está registrado
 
@@ -61,6 +63,11 @@ function Auth() {
     }
 
     // <button onClick={logout}> Logout</button>
+
+    // ir a sign in
+    const goToSignIn = () => {
+        navigate("/login")
+    }
   
 
     return (
@@ -76,6 +83,7 @@ function Auth() {
 
             <p>Already have an account? Sign in! </p>
             <button onClick={signInWithGoogle}>Sign in with google</button>
+            <button onClick={goToSignIn}>Sign in</button>
 
 
             <button onClick={logout}> Logout</button>

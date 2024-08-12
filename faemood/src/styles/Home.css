@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    color: pink;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/backhome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
