@@ -1,0 +1,63 @@
+p, h2 {
+    color: black;
+}
+
+.titP {
+    background-color: #578164;
+    padding: 0px 200px;
+    color: white;
+    margin-top: 50px;
+}
+
+
+.profilContainer {
+    background-color: #f0f0f0; 
+    width: 100%; 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+}
+
+
+.logout, .delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A4CFB2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.divRegistro button:hover {
+    background-color: #578164;
+}
+
+
+.profilContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.logout, .delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #A4CFB2;
+    color: white;
+    margin: 5px; 
+}
+
+.logout:hover, .delete:hover {
+    background-color: #578164;
+}

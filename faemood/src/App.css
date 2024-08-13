@@ -3,12 +3,15 @@
   text-align: center;
 }
 
+
+
 header {
-  position: fixed; /* Asegura que el header esté siempre en la parte superior */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el header */
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+  z-index: 1000; 
 }
+

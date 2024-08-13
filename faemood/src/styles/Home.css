@@ -1,19 +1,23 @@
-body {
-    background-color: black;
+
+
+.hH {
+    color: white;
+    margin-top: 45%;
 }
 
-h2 {
-    color: pink;
-}
-
-body, html {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../assets/backhome.jpg');
-    background-size: cover;
-    background-position: center;
+.home-container {
+    background-image: url('../assets/backhome.jpg'); 
+    background-position: center; 
     background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex; 
+    padding: 20px; 
+}
+
+body {
+    background-color: transparent; 
+}
+
+html, body {
+    margin: 0;
 }

@@ -7,9 +7,7 @@ function Home() {
 
     return (
         <div className="home-container">
-            <h2>Ready for a day of full emotions?</h2>
-            <img src={hada} />
-
+            <h2 className="hH">Ready for a day of full emotions?</h2>
         </div>
 
     )

@@ -1,0 +1,49 @@
+
+.moodsContainer {
+    background-color: #e3f0e7;
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex; 
+    padding: 20px; 
+}
+
+
+.cardMood {
+    background-color: #a7c9b0ad;
+    border-radius: 10px;
+    padding: 20px 5px;
+    height: 40%;
+    margin-top: 30%
+}
+
+.tit {
+    color: #564946;
+}
+
+.comentario {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #578164;
+    width: 80%;
+    box-sizing: border-box;
+    line-height: 1.5;
+
+}
+
+.send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.btnMood {
+    width: 50%;
+    background-color: #A4CFB2 ;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white
+}

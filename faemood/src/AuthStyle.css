@@ -1,14 +1,4 @@
-body, html {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('./assets/fairy.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 .divRegistro {
     background-color: #a4cfb270;
@@ -19,6 +9,7 @@ body, html {
     flex-direction: column;
     width: 300px;
     text-align: center;
+    margin-top: 300px;
 }
 
 .divRegistro input {
