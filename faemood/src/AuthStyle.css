@@ -1,15 +1,23 @@
 
+.allContainer {
+    background-image: url('./assets/fairy.jpg'); 
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 100px;
+}
 
 .divRegistro {
     background-color: #a4cfb270;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px #cbeed7; /* Sombra para darle aspecto de tarjeta */
+    box-shadow: 0px 4px 10px #cbeed7; 
     display: flex;
     flex-direction: column;
     width: 300px;
     text-align: center;
-    margin-top: 300px;
+    margin: 60px 25px;
+    
 }
 
 .divRegistro input {
@@ -39,4 +47,18 @@
     margin-top: 10px;
     color: #564946;
     font-size: 14px;
+}
+
+.faeMood {
+    background-color: #a4cfb2bb;
+    box-shadow: 0px 4px 10px #cbeed7; 
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.pFae {
+    font-size: 18px;
+    color: #564946;
+    margin-top: 40px;
 }

@@ -5,6 +5,8 @@ import happy from "../../assets/happy.png"
 import sad from "../../assets/sad.png"
 import angry from "../../assets/angry.png"
 import '../../styles/Moods.css'
+import { useNavigate } from "react-router-dom";
+
 
 
 const moodOptions = [
@@ -16,13 +18,19 @@ const moodOptions = [
 function Moods() {
     const [selectedMood, setSelectedMood] = useState(null);
     const [newComment, setNewComment] = useState("");
+    const navigate = useNavigate()
 
-    const moodCollectionRef = collection(db, "mood");
+    const moodCollectionRef = collection(db, "mood"); // hago referencia a la coleccion de mood que hay en firebase
+
+    const goToCalendar = async () => {
+        navigate("/calendar")
+    }
+
 
     const onSubmitMood = async () => {
         try {
             if (selectedMood === null) {
-                throw new Error("No mood selected");
+                throw new Error("No mood selected"); // para que no se pueda añadir ningun mood sin antes seleccionarlo
             }
 
             // fecha actual
@@ -34,12 +42,14 @@ function Moods() {
                 date: Timestamp.fromDate(currentDate),
                 userId: auth?.currentUser?.uid
             });
+            goToCalendar()
             console.log('Mood added successfully');
         } catch (err) {
             console.error('Error adding mood: ', err);
         }
     };
 
+    
 
     return (
         <>
@@ -47,11 +57,11 @@ function Moods() {
                 <div className="cardMood">
                     <h2 className="tit">Select Your Mood</h2>
                     <div style={{ display: "flex", gap: "10px" }}>
-                        {moodOptions.map(mood => (
+                        {moodOptions.map(mood => ( // itero sobre el array para crear un elemento para cadsa estado de animo
                             <div
                                 key={mood.id}
                                 style={{ cursor: "pointer", border: selectedMood === mood.id ? "2px solid blue" : "none" }}
-                                onClick={() => setSelectedMood(mood.id)}
+                                onClick={() => setSelectedMood(mood.id)} // al pulsar el estado se coge la id del mood que es
                             >
                                 <img
                                     src={mood.src}
@@ -65,7 +75,7 @@ function Moods() {
                     <div className="send">
                     <textarea
                         className="comentario"
-                        placeholder='Comment...'
+                        placeholder='Thoughts...'
                         onChange={(e) => setNewComment(e.target.value)}
                         rows="4"
                         cols="50"

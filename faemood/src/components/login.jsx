@@ -3,6 +3,7 @@ import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import '../AuthStyle.css'
 import { useNavigate } from "react-router-dom";
+import '../AuthStyle.css'
 
 function Login() {
 
@@ -10,6 +11,8 @@ function Login() {
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
     const navigate = useNavigate()
+
+    console.log(auth?.currentUser?.email)
 
     const isUserCorrect = async () => {
 
@@ -43,19 +46,19 @@ function Login() {
         goToHome()
     }
 
-    return(
+    return (
 
-    <div className="divRegistro">
-            
-            <input className="email" placeholder="Email..." onChange={(e) => setEmail(e.target.value)}></input>
-            <input className="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
+        <>
+            <div className="allContainer">
+                <div className="divRegistro">
+                    <input className="email" placeholder="Email..." onChange={(e) => setEmail(e.target.value)}></input>
+                    <input className="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
 
-            <button onClick={handleClick}>Sign in</button>
-            {error && <p style={{ color: 'black' }}>{error}</p>}
-
-
-
-        </div>
+                    <button onClick={handleClick}>Sign in</button>
+                    {error && <p style={{ color: 'black' }}>{error}</p>}
+                </div>
+            </div>
+        </>
     )
 
 

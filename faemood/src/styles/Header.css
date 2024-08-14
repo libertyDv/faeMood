@@ -1,0 +1,21 @@
+.btnHeader {
+    padding: 5px 15px;
+    margin: 0 10px;
+    background-color: #A4CFB2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+   
+    width: 100%;
+    background: #564946;
+    padding: 10px 0px;
+    padding-right: 20px;
+}

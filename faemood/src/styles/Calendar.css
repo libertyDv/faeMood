@@ -4,29 +4,28 @@
     background-color: #e3f0e7;
     background-position: center; 
     background-repeat: no-repeat;
-    min-height: 200vh;
+    min-height: 100vh;
     padding: 10px 0;
-    margin-top: 40px;
     
 }
 
 .calendarTitle {
     text-align: center;
     color: #564946;
-}
-
-.calendar {
+    margin-top: 70px;
 }
 
 
 .custom-calendar .react-calendar__tile {
-    background-color: #b5cfbe88;
-    border-radius: 8px;
+    background-color: #b5cfbe00;
+    border-radius: 10px;
+    padding: 10px;
     transition: background-color 0.3s ease;
     height: 80px;
     margin-bottom: 10px;
+    border: none;
     
-    
+
 }
 
 .custom-calendar .react-calendar__tile:enabled:hover,
@@ -77,6 +76,19 @@
     cursor: not-allowed;
 }
 
+.infoCard {
+    border: 3px solid #A4CFB2;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #cbe7d4bb;
+    box-shadow: 0px 4px 10px #cbeed7; 
 
+}
+
+.dateCard {
+    margin-top: 0px;
+    background-color: #89b998;
+    color: white;
+}
 
 

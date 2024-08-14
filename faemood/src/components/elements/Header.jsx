@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '../../styles/Header.css'
 
 
 function Header() {
     const navigate = useNavigate()
-
 
     const goToHome = () => {
         navigate("/home")
@@ -27,10 +26,10 @@ function Header() {
         <>
 
             <header className="header">
-            <button onClick={goToHome}>Home</button>
-                <button onClick={goToMoods}>Add mood</button>
-                <button onClick={goToCalendar}>Calendar</button>
-                <button onClick={goToProfile}>Profile</button>
+            <button className="btnHeader" onClick={goToHome}>Home</button>
+                <button className="btnHeader" onClick={goToMoods}>Add mood</button>
+                <button className="btnHeader" onClick={goToCalendar}>Calendar</button>
+                <button className="btnHeader" onClick={goToProfile}>Profile</button>
             </header>
 
         </>
