@@ -1,9 +1,10 @@
 import { db, auth } from "../../config/firebase"
 import { collection, addDoc, Timestamp } from "firebase/firestore"
 import { useState } from "react"
-import happy from "../../assets/happy.png"
-import sad from "../../assets/sad.png"
-import angry from "../../assets/angry.png"
+import happy from "../../assets/happyF.png"
+import sad from "../../assets/sadF.png"
+import angry from "../../assets/angryF.png"
+import bored from "../../assets/boredF.png"
 import '../../styles/Moods.css'
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +13,8 @@ import { useNavigate } from "react-router-dom";
 const moodOptions = [
     { id: "happy", src: happy },
     { id: "sad", src: sad },
-    { id: "angry", src: angry }
+    { id: "angry", src: angry },
+    { id: "bored", src: bored }
 ]
 
 function Moods() {
@@ -60,13 +62,13 @@ function Moods() {
                         {moodOptions.map(mood => ( // itero sobre el array para crear un elemento para cadsa estado de animo
                             <div
                                 key={mood.id}
-                                style={{ cursor: "pointer", border: selectedMood === mood.id ? "2px solid blue" : "none" }}
+                                style={{ cursor: "pointer", border: selectedMood === mood.id }}
                                 onClick={() => setSelectedMood(mood.id)} // al pulsar el estado se coge la id del mood que es
                             >
                                 <img
                                     src={mood.src}
                                     alt={mood.label}
-                                    style={{ width: "100px", height: "100px" }}
+                                    style={{ width: "90px", height: "70px" }}
                                 />
                                 <p>{mood.label}</p>
                             </div>

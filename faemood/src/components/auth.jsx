@@ -33,7 +33,7 @@ function Auth() {
             setError("")
             try {
                 await createUserWithEmailAndPassword(auth, email, password)
-                goToSignHome()
+                goToCalendar()
             } catch (err) {
                 console.log(err)
             }
@@ -51,8 +51,8 @@ function Auth() {
         }
     }
 
-    const goToSignHome = async () => {
-        navigate("/home")
+    const goToCalendar = async () => {
+        navigate("/calendar")
 
     }
 
@@ -98,7 +98,6 @@ function Auth() {
                     <button onClick={goToSignIn}>Sign in</button>
 
 
-                    <button onClick={logout}> Logout</button>
                 </div>
 
 

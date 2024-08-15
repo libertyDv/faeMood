@@ -4,14 +4,16 @@ import { db } from "../../config/firebase"
 import { collection, getDocs } from "firebase/firestore";
 import { format } from 'date-fns';
 import '../../styles/Calendar.css';
-import happy from "../../assets/happy.png";
-import sad from "../../assets/sad.png";
-import angry from "../../assets/angry.png";
+import happy from "../../assets/happyF.png";
+import sad from "../../assets/sadF.png";
+import angry from "../../assets/angryF.png";
+import bored from "../../assets/boredF.png";
 
 const moodOptions = [
     { id: "happy", src: happy },
     { id: "sad", src: sad },
-    { id: "angry", src: angry }
+    { id: "angry", src: angry },
+    { id: "bored", src: bored }
 ]
 
 function CalendarCom() {
@@ -97,7 +99,7 @@ function CalendarCom() {
                     {commentsForSelectedDate.length > 0 ? (
                         commentsForSelectedDate.map((mood, index) => (
                             <div key={index} className="infoCard">
-                                <img className="imgCard" src={getMoodImage(mood.type)} alt={mood.type} style={{ width: '50px', height: '50px' }} />
+                                <img className="imgCard" src={getMoodImage(mood.type)} alt={mood.type} style={{ width: '60px', height: '50px' }} />
                                 <p className="dateCard"> {format(value, 'yyyy-MM-dd')}</p>
                                 <p className="commentCard"><strong>What you thought that day</strong><br></br> {mood.comment}</p>
                             </div>

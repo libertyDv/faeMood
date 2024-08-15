@@ -37,13 +37,13 @@ function Login() {
 
     }
 
-    const goToHome = () => {
-        navigate("/home")
+    const goToCalendar = () => {
+        navigate("/calendar")
     }
 
     const handleClick = () => {
         signIn()
-        goToHome()
+        goToCalendar()
     }
 
     return (

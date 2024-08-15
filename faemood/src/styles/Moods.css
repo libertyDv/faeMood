@@ -6,6 +6,7 @@
     min-height: 100vh;
     display: flex; 
     padding: 20px; 
+    
 }
 
 
@@ -14,7 +15,8 @@
     border-radius: 10px;
     padding: 20px 5px;
     height: 40%;
-    margin-top: 30%
+    margin-top: 30%;
+    box-shadow: 0px 10px 20px #cbeed7;
 }
 
 .tit {
@@ -47,3 +49,30 @@
     margin-top: 10px;
     color: white
 }
+
+.cardMood div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.cardMood img {
+    margin-left: 20px;
+
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cardMood div > div.selected {
+    border-color: #4caf50; 
+    background-color: #c8e6c9;
+}
+
+.comentario:focus {
+    background-color: #E3EFE6;
+    color: #578164; 
+    outline: none; 
+}
+
+
